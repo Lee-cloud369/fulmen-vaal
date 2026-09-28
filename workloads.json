@@ -1,0 +1,5 @@
+[
+  {"name": "payments-web", "image": "nginx:1.19", "scan_file": "nginx-old.json", "role_name": "fulmen-demo-webapp-role"},
+  {"name": "reports-viewer", "image": "nginx:1.19", "scan_file": "nginx-old.json", "role_name": "fulmen-demo-lowrisk-role"},
+  {"name": "docs-site", "image": "nginx:1.27", "scan_file": "nginx-new.json", "role_name": "fulmen-demo-webapp-role"}
+]

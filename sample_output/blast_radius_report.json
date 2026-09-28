@@ -1,0 +1,73 @@
+[
+  {
+    "workload": "payments-web",
+    "image": "nginx:1.19",
+    "role": "fulmen-demo-webapp-role",
+    "critical_vulns": 42,
+    "high_vulns": 147,
+    "fixable_vulns": 156,
+    "vuln_score": 89,
+    "iam_score": 100,
+    "wildcard_role": true,
+    "blast_radius_score": 89,
+    "risk_level": "CRITICAL",
+    "what_if": {
+      "current": 89,
+      "after_image_update": 10,
+      "after_iam_fix": 22,
+      "after_both": 2
+    },
+    "best_first_action": "Update the image first",
+    "recommendations": [
+      "Update image: 156 of 189 findings have a fix",
+      "Replace wildcard IAM permissions with least-privilege policy"
+    ]
+  },
+  {
+    "workload": "docs-site",
+    "image": "nginx:1.27",
+    "role": "fulmen-demo-webapp-role",
+    "critical_vulns": 11,
+    "high_vulns": 155,
+    "fixable_vulns": 72,
+    "vuln_score": 52,
+    "iam_score": 100,
+    "wildcard_role": true,
+    "blast_radius_score": 52,
+    "risk_level": "HIGH",
+    "what_if": {
+      "current": 52,
+      "after_image_update": 30,
+      "after_iam_fix": 13,
+      "after_both": 8
+    },
+    "best_first_action": "Fix IAM permissions first",
+    "recommendations": [
+      "Update image: 72 of 166 findings have a fix",
+      "Replace wildcard IAM permissions with least-privilege policy"
+    ]
+  },
+  {
+    "workload": "reports-viewer",
+    "image": "nginx:1.19",
+    "role": "fulmen-demo-lowrisk-role",
+    "critical_vulns": 42,
+    "high_vulns": 147,
+    "fixable_vulns": 156,
+    "vuln_score": 89,
+    "iam_score": 25,
+    "wildcard_role": false,
+    "blast_radius_score": 22,
+    "risk_level": "MEDIUM",
+    "what_if": {
+      "current": 22,
+      "after_image_update": 2,
+      "after_iam_fix": 22,
+      "after_both": 2
+    },
+    "best_first_action": "Update the image first",
+    "recommendations": [
+      "Update image: 156 of 189 findings have a fix"
+    ]
+  }
+]
